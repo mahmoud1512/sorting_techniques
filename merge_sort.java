@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class merge_sort {
 
-    public static int []sort(int[] array,int starting_point,int length )
+    public  int []sort(int[] array,int starting_point,int length )
     {
         if(length==1)
         {
@@ -52,7 +52,7 @@ public class merge_sort {
 //        for (int i = 0; i < 25; i++) {
 //            y[i]=(int)(Math.random()*1000);
 //        }
-//       y=sort(y,0,y.length);
+//       y=x.sort(y,0,y.length);
 //        System.out.println(Arrays.toString(y));
     }
 
