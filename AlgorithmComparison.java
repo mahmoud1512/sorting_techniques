@@ -8,11 +8,8 @@ public class AlgorithmComparison {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         int size = sc.nextInt();
-        int arr[] = new int[size];
-        Random random = new Random();
-        for (int i = 0; i < size; i++) {
-            arr[i] = (int) (random.nextInt(1000000));
-        }
+        GenerateArray generateArray = new GenerateArray();
+        int arr[] = generateArray.generateRandomPositiveArray(size);
 
         System.out.println("Array length = " + size);
         System.out.println("\nElements randomly distributed : ");
@@ -21,16 +18,12 @@ public class AlgorithmComparison {
 
         System.out.println("\nElements already sorted : ");
         System.out.println("\nSorting Algorithm\tTime Taken(ns)");
-        Arrays.sort(arr);
+        arr = generateArray.generateSortedArray(arr);
         compareSortingAlgorithms(arr);
 
         System.out.println("\nElements sorted in reverse order : ");
         System.out.println("\nSorting Algorithm\tTime Taken(ns)");
-        for (int i = 0; i <= arr.length / 2; i++) {
-            int t = arr[i];
-            arr[i] = arr[size - i - 1];
-            arr[size - i - 1] = t;
-        }
+        arr = generateArray.generateSortedReversedArray(arr);
         compareSortingAlgorithms(arr);
     }
 
