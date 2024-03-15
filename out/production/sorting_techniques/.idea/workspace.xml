@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ea2e776-42bb-4125-9c2d-89ad0dd7181d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sorting_techniques.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sort_Array.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort_Array.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sort_Array.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ui.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ui.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
