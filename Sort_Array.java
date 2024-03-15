@@ -32,7 +32,8 @@ public class Sort_Array {
                 k = k - 1;
             }
             array[k + 1] = key;
-            intermediate_results.add(array.clone());
+            if(intermediate)
+                intermediate_results.add(array.clone());
         }
         if (intermediate) {
             return intermediate_results;
@@ -47,7 +48,7 @@ public class Sort_Array {
     public  ArrayList<int[]> efficientSort(boolean intermediate)
     {
         intermediate_results.clear();
-        int[] output_array = mergeSortRecursive(this.array, 0, array.length);
+        int[] output_array = mergeSortRecursive(this.array, 0, array.length, intermediate);
         if (intermediate) {
             return intermediate_results;
         }
@@ -58,7 +59,7 @@ public class Sort_Array {
         }
     }
 
-    private int [] mergeSortRecursive(int[] array,int starting_point,int length) {
+    private int [] mergeSortRecursive(int[] array,int starting_point,int length, boolean intermediate) {
         if(length==1)
         {
             int x=array[starting_point];
@@ -68,12 +69,15 @@ public class Sort_Array {
         }
         int mid_point=length/2;
 
-        int [] left=mergeSortRecursive(array,starting_point,mid_point);
-        intermediate_results.add(left);
-        int [] right=mergeSortRecursive(array,starting_point+mid_point,length-mid_point);
-        intermediate_results.add(right);
+        int [] left=mergeSortRecursive(array,starting_point,mid_point, intermediate);
+        if(intermediate)
+            intermediate_results.add(left);
+        int [] right=mergeSortRecursive(array,starting_point+mid_point,length-mid_point, intermediate);
+        if(intermediate)
+            intermediate_results.add(right);
         int [] ans=merge(left,right);
-        intermediate_results.add(ans);
+        if(intermediate)
+            intermediate_results.add(ans);
         return ans;
     }
 
@@ -116,14 +120,16 @@ public class Sort_Array {
         for (int i = 0; i < size ; i++) {
             frequency[array[i]]++;
         }
-        intermediate_results.add(frequency.clone());
+        if(intermediate)
+            intermediate_results.add(frequency.clone());
         int []output_array=new int[size];
         int count=0;
         for (int i = 0; i <= auxiliary_size; i++) {
             while(frequency[i]>0)
             {
                 output_array[count++]=i;
-                intermediate_results.add(output_array.clone());
+                if(intermediate)
+                    intermediate_results.add(output_array.clone());
                 frequency[i]--;
             }
 
