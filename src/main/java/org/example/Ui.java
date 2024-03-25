@@ -49,15 +49,12 @@ public class Ui {
             ArrayList<int[]> sorted = null;
             switch (choice) {
                 case 1 -> {
-                    assert sortArray != null;
                     sorted = sortArray.simpleSort(intermediate == 1);
                 }
                 case 2 -> {
-                    assert sortArray != null;
                     sorted = sortArray.efficientSort(intermediate == 1);
                 }
                 case 3 -> {
-                    assert sortArray != null;
                     sorted = sortArray.nonComparisonSort(intermediate == 1);
                 }
                 default -> System.out.println("Error : unspecified choice");
